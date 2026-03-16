@@ -4,227 +4,124 @@
     box-sizing: border-box;
 }
 
-:root {
-    --primary: #5F527A;
-    --bg: #999999;
-    --card-bg: #ffffff;
-    --card-border: rgba(0, 0, 0, 0.08);
-    --text: #2d2d2d;
-    --text-muted: #666666;
-}
-
 body {
-    font-family: 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
+    font-family: 'Cairo', sans-serif;
+    background: #5F527A;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 40px 16px 50px;
+    padding: 0;
 }
 
-.container {
-    max-width: 420px;
+.page {
+    max-width: 680px;
     width: 100%;
-    background: var(--card-bg);
-    border-radius: 24px;
-    padding: 40px 28px 30px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 32px;
 }
 
 .profile {
     text-align: center;
-    margin-bottom: 32px;
-}
-
-.avatar-wrapper {
-    display: inline-block;
-    margin-bottom: 16px;
+    margin-bottom: 28px;
 }
 
 .avatar {
-    width: 110px;
-    height: 110px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
-    border: 3px solid var(--primary);
-    overflow: hidden;
-    background: var(--bg);
-}
-
-.avatar img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+    margin-bottom: 12px;
 }
 
 .username {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
-    color: var(--primary);
+    color: #ffffff;
     margin-bottom: 4px;
 }
 
 .bio {
     font-size: 14px;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.75);
     font-weight: 400;
 }
 
 .links {
+    width: 100%;
+    max-width: 680px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 28px;
-}
-
-.link-item {
-    display: flex;
-    align-items: center;
     gap: 12px;
-    padding: 13px 16px;
-    background: #f7f7f8;
-    border: 1px solid var(--card-border);
-    border-radius: 14px;
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 600;
-    font-size: 15px;
-    transition: all 0.2s ease;
-    direction: rtl;
+    margin-bottom: auto;
 }
 
-.link-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary);
-}
-
-.link-item:active {
-    transform: scale(0.98);
-}
-
-.link-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
+.link-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-    color: white;
+    position: relative;
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.link-text {
-    flex: 1;
-    text-align: right;
+.link-btn i {
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    color: #5F527A;
 }
 
-.link-arrow {
-    opacity: 0.3;
-    font-size: 12px;
-    transition: opacity 0.2s ease;
+.link-btn span {
+    text-align: center;
 }
 
-.link-item:hover .link-arrow {
-    opacity: 0.7;
+.link-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-.link-item.instagram .link-icon {
-    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-}
-
-.link-item.tiktok .link-icon {
-    background: #111;
-}
-
-.link-item.youtube .link-icon {
-    background: #ff0000;
-}
-
-.link-item.twitter .link-icon {
-    background: #000;
-}
-
-.link-item.github .link-icon {
-    background: #24292e;
-}
-
-.link-item.email .link-icon {
-    background: var(--primary);
-}
-
-.link-item.shop .link-icon {
-    background: var(--primary);
+.link-btn:active {
+    transform: scale(0.98);
 }
 
 .footer {
     text-align: center;
-    padding-top: 16px;
-    border-top: 1px solid var(--card-border);
+    padding: 32px 0 8px;
 }
 
 .footer p {
     font-size: 12px;
-    color: var(--text-muted);
-}
-
-.container {
-    animation: fade-in 0.5s ease both;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.link-item {
-    opacity: 0;
-    animation: fade-in-link 0.35s ease forwards;
-}
-
-.link-item:nth-child(1) { animation-delay: 0.15s; }
-.link-item:nth-child(2) { animation-delay: 0.20s; }
-.link-item:nth-child(3) { animation-delay: 0.25s; }
-.link-item:nth-child(4) { animation-delay: 0.30s; }
-.link-item:nth-child(5) { animation-delay: 0.35s; }
-.link-item:nth-child(6) { animation-delay: 0.40s; }
-.link-item:nth-child(7) { animation-delay: 0.45s; }
-
-@keyframes fade-in-link {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 20px 12px 40px;
+    .page {
+        padding: 36px 16px 24px;
     }
-    .container {
-        padding: 30px 20px 24px;
+    .avatar {
+        width: 80px;
+        height: 80px;
     }
     .username {
-        font-size: 21px;
+        font-size: 18px;
     }
-    .link-item {
-        padding: 12px 14px;
-        font-size: 14px;
+    .link-btn {
+        padding: 14px 16px;
+        font-size: 15px;
+        border-radius: 10px;
     }
-    .link-icon {
-        width: 36px;
-        height: 36px;
-        font-size: 16px;
+    .link-btn i {
+        right: 16px;
+        font-size: 18px;
     }
 }
