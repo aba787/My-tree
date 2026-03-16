@@ -1,78 +1,117 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ada_77 | Links</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Animated Background -->
+    <div class="bg-orbs">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+    </div>
+
     <div class="container">
+
         <!-- Profile Section -->
         <div class="profile">
-            <div class="avatar">
-                <img src="https://via.placeholder.com/120/4a90e2/ffffff?text=A" alt="Ada_77" id="profile-img">
+            <div class="avatar-wrapper">
+                <div class="avatar-ring"></div>
+                <div class="avatar">
+                    <img src="logo.svg" alt="Ada_77" id="profile-img">
+                </div>
+                <div class="online-dot"></div>
             </div>
-            <h1 class="username">@Ada_77</h1>
-            <p class="bio">Welcome to my digital space ✨</p>
+            <h1 class="username">Ada_77</h1>
+            <p class="bio">مبرمجة وصانعة محتوى ✨</p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-num">77K+</span>
+                    <span class="stat-label">متابع</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-label">مشروع</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">5⭐</span>
+                    <span class="stat-label">تقييم</span>
+                </div>
+            </div>
         </div>
 
         <!-- Links Section -->
         <div class="links">
-            <a href="#" class="link-item" data-link="instagram">
-                <i class="fab fa-instagram"></i>
-                <span>Instagram</span>
-                <i class="fas fa-external-link-alt"></i>
+
+            <a href="https://www.instagram.com/ada_77" class="link-item instagram" target="_blank" rel="noopener">
+                <div class="link-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <span class="link-text">Instagram</span>
+                <div class="link-arrow"><i class="fas fa-arrow-left"></i></div>
             </a>
 
-            <a href="#" class="link-item" data-link="tiktok">
-                <i class="fab fa-tiktok"></i>
-                <span>TikTok</span>
-                <i class="fas fa-external-link-alt"></i>
+            <a href="https://www.tiktok.com/@ada_77" class="link-item tiktok" target="_blank" rel="noopener">
+                <div class="link-icon">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <span class="link-text">TikTok</span>
+                <div class="link-arrow"><i class="fas fa-arrow-left"></i></div>
             </a>
 
-            <a href="#" class="link-item" data-link="youtube">
-                <i class="fab fa-youtube"></i>
-                <span>YouTube</span>
-                <i class="fas fa-external-link-alt"></i>
+            <a href="https://www.youtube.com/@ada_77" class="link-item youtube" target="_blank" rel="noopener">
+                <div class="link-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <span class="link-text">YouTube</span>
+                <div class="link-arrow"><i class="fas fa-arrow-left"></i></div>
             </a>
 
-            <a href="#" class="link-item" data-link="twitter">
-                <i class="fab fa-twitter"></i>
-                <span>Twitter</span>
-                <i class="fas fa-external-link-alt"></i>
+            <a href="https://x.com/ada_77" class="link-item twitter" target="_blank" rel="noopener">
+                <div class="link-icon">
+                    <i class="fab fa-x-twitter"></i>
+                </div>
+                <span class="link-text">X (Twitter)</span>
+                <div class="link-arrow"><i class="fas fa-arrow-left"></i></div>
             </a>
 
-            <a href="#" class="link-item" data-link="website">
-                <i class="fas fa-globe"></i>
-                <span>My Website</span>
-                <i class="fas fa-external-link-alt"></i>
+            <a href="https://github.com/ada77" class="link-item github" target="_blank" rel="noopener">
+                <div class="link-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <span class="link-text">GitHub</span>
+                <div class="link-arrow"><i class="fas fa-arrow-left"></i></div>
             </a>
 
-            <a href="#" class="link-item" data-link="email">
-                <i class="fas fa-envelope"></i>
-                <span>Contact Me</span>
-                <i class="fas fa-external-link-alt"></i>
+            <a href="mailto:contact@ada77.com" class="link-item email" target="_blank" rel="noopener">
+                <div class="link-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <span class="link-text">تواصل معي</span>
+                <div class="link-arrow"><i class="fas fa-arrow-left"></i></div>
             </a>
 
-            <a href="#" class="link-item" data-link="shop">
-                <i class="fas fa-shopping-bag"></i>
-                <span>Shop</span>
-                <i class="fas fa-external-link-alt"></i>
+            <a href="https://shop.ada77.com" class="link-item shop" target="_blank" rel="noopener">
+                <div class="link-icon">
+                    <i class="fas fa-bag-shopping"></i>
+                </div>
+                <span class="link-text">المتجر</span>
+                <div class="link-arrow"><i class="fas fa-arrow-left"></i></div>
             </a>
 
-            <a href="#" class="link-item" data-link="github">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-                <i class="fas fa-external-link-alt"></i>
-            </a>
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            <p>Made with ❤️ on Replit</p>
+            <p>صُنع بـ ❤️ بواسطة مبرمجة Ada</p>
         </div>
     </div>
 
