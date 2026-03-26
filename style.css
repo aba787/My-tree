@@ -10,9 +10,9 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 0;
 }
 
+/* ─── الصفحة ─── */
 .page {
     max-width: 680px;
     width: 100%;
@@ -23,7 +23,7 @@ body {
     padding: 48px 20px 32px;
 }
 
-/* ─── Profile ─── */
+/* ─── الملف الشخصي ─── */
 .profile {
     text-align: center;
     margin-bottom: 32px;
@@ -41,16 +41,17 @@ body {
     font-size: 20px;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .bio {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.75);
     font-weight: 400;
+    line-height: 1.6;
 }
 
-/* ─── Links wrapper ─── */
+/* ─── الروابط ─── */
 .links {
     width: 100%;
     display: flex;
@@ -59,7 +60,7 @@ body {
     margin-bottom: auto;
 }
 
-/* ─── Buttons ─── */
+/* ─── الأزرار ─── */
 .link-btn {
     display: flex;
     align-items: center;
@@ -96,9 +97,9 @@ body {
     transform: scale(0.98);
 }
 
-/* فرصة عمل — highlighted */
+/* فرصة عمل */
 .link-btn.link-job {
-    background: rgba(95, 82, 122, 0.12);
+    background: rgba(95, 82, 122, 0.15);
     border-color: #5F527A;
     color: #ffffff;
     font-weight: 700;
@@ -109,18 +110,28 @@ body {
 }
 
 .link-btn.link-job:hover {
-    background: rgba(95, 82, 122, 0.25);
+    background: rgba(95, 82, 122, 0.28);
 }
 
-/* ─── Dividers ─── */
+/* خيمة تقنية - أيقونة صورة */
+.link-img-icon {
+    position: absolute;
+    right: 18px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ─── الفاصل ─── */
 .divider {
     width: 100%;
     height: 1px;
     background: rgba(255, 255, 255, 0.3);
-    margin: 6px 0;
+    margin: 4px 0;
 }
 
-/* ─── Footer ─── */
+/* ─── التذييل ─── */
 .footer {
     text-align: center;
     padding: 28px 0 8px;
@@ -131,24 +142,34 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* ─── Responsive ─── */
+/* ─── الموبايل ─── */
 @media (max-width: 480px) {
     .page {
         padding: 36px 16px 24px;
     }
+
     .avatar {
         width: 80px;
         height: 80px;
     }
+
     .username {
         font-size: 18px;
     }
+
     .link-btn {
         padding: 13px 16px;
         font-size: 15px;
     }
+
     .link-btn i {
         right: 16px;
         font-size: 18px;
+    }
+
+    .link-img-icon {
+        right: 14px;
+        width: 24px;
+        height: 24px;
     }
 }
